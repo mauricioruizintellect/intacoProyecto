@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validacionid</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+   AND(
+      LEN( Numero_de_Identificacion__c ) != 5,
+      ISPICKVAL( TIpo_de_Identificacion__c ,&quot;RUC&quot;) 
+  ),
+  AND(
+      LEN( Numero_de_Identificacion__c) != 6,
+      ISPICKVAL( TIpo_de_Identificacion__c ,&quot;CEDULA&quot;) 
+  )
+)</errorConditionFormula>
+    <errorMessage>El numero de identificacion no cumple con los criterios validos (tamaño)</errorMessage>
+</ValidationRule>
