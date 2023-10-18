@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Proyecto_Intaco</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
+		<members>Account.Numero_de_Identificacion__c</members>
+		<members>Account.TIpo_de_Identificacion__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Facturas__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Facturas__c</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>Proyecto_Intaco_UtilityBar</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Account.Validacionid</members>
+		<name>ValidationRule</name>
+	</types>
+	<version>58.0</version>
+</Package>
