@@ -1,0 +1,33 @@
+<apex:page readOnly="true" standardController="Account" applyHtmlTag="false" sidebar="false"  showHeader="false"  cache="true" renderAs="pdf" docType="html-5.0">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <style type="text/css">
+            @page {size: A4 letter; border: 1px solid black; padding-left: 5px; padding-right: 5px;     }
+            th {font-weight: bold; text-align: center; background-color: #92d5f0; color: black; padding: 8px;}
+            td {font-size: 15px; text-align: left; padding: 8px; }
+            table{ border-collapse: collapse;}
+            table, th, td {border: 1px solid black;}
+        </style>
+    </head>
+    <center>
+        <h3>{!Account.Name}</h3>
+    </center>
+    <table width="100%">
+        <tr>
+            <th>Nombre del cliente</th>
+            <th>Número de identidad</th>
+            <th>Tipo de identidad</th>
+            <th>Tipo de cliente</th>
+            <th>Industria</th>
+            <th>Descripción</th>
+        </tr>
+            <tr>
+                <td>{!Account.Name}</td>
+                <td>{!Account.int_numeroIdent__c}</td>
+                <td>{!Account.int_TipoIdent__c}</td>
+                <td>{!Account.Type}</td>
+                <td>{!Account.Industry}</td>
+                <td>{!Account.Description}</td>
+            </tr>
+    </table>
+</apex:page>

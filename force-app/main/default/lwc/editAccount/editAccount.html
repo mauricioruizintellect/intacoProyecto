@@ -1,0 +1,16 @@
+<template>
+    <lightning-record-edit-form record-id={recordId} object-api-name="Account" onsuccess={handleSuccess}>
+        <lightning-input-field field-name="Name"> </lightning-input-field>
+        <lightning-input-field field-name="int_numeroIdent__c"> </lightning-input-field>
+        <lightning-input-field field-name="int_TipoIdent__c"> </lightning-input-field>
+        <lightning-input-field field-name="Type"> </lightning-input-field>
+        <lightning-input-field field-name="Industry"> </lightning-input-field>
+        <lightning-input-field field-name="Description"> </lightning-input-field>
+        <div class="slds-p-around_medium">
+            <lightning-input type="email" value={email} label="Email address" onchange={captureEmail}></lightning-input>
+        </div>
+        <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Actualizar">
+        </lightning-button>
+        <lightning-button label="Enviar PDF" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </lightning-record-edit-form>
+</template>
