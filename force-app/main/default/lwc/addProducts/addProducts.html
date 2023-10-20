@@ -1,0 +1,27 @@
+<template>
+    <lightning-card icon-name="standard:product" variant="base" title="Creación de producto">
+        <div if:true={isLoading} class="slds-is-relative">
+            <lightning-spinner
+                alternative-text="Loading..." variant="brand">
+            </lightning-spinner>
+        </div>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input data-element="productName" label="Nombre de Producto" placeholder="Nombre de Producto" required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input class="productPrice" type="number" label="Precio de producto" placeholder="Precio de producto" required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-textarea name="descProd" label="Descripción de producto" placeholder="Descripción de producto" required onchange={captureDescription}></lightning-textarea>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <div class="slds-p-right_x-small">
+                    <lightning-button variant="brand-outline" type="submit" label="Guardar Producto" onclick={handleClick}></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

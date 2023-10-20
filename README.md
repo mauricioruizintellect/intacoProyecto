@@ -1,9 +1,9 @@
 # Salesforce DX Project: Despliegues con comandos:
 ## con check Only
-sfdx force:source:deploy -c -u Ambiente01 -x manifest/parte3.xml --testlevel RunSpecifiedTests -r SendFileControllerTest
+sfdx force:source:deploy -c -u Ambiente01 -x manifest/parte4.xml --testlevel RunSpecifiedTests -r SendFileControllerTest
 
 ## sin check Only para deploy
-sfdx force:source:deploy -u Ambiente01 -x manifest/parte3.xml --testlevel RunSpecifiedTests -r SendFileControllerTest
+sfdx force:source:deploy -u Ambiente01 -x manifest/parte4.xml --testlevel RunSpecifiedTests -r SendFileControllerTest
 
 # TestLevel:
 
